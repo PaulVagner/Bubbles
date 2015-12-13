@@ -40,10 +40,6 @@ class ViewController: UIViewController, AVCaptureAudioDataOutputSampleBufferDele
             
         }
         
-
-//        captureOutput.setSampleBufferDelegate(self, queue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
-
-        
                 captureOutput.setSampleBufferDelegate(self, queue: dispatch_get_main_queue())
         
             session.startRunning()
@@ -61,21 +57,7 @@ class ViewController: UIViewController, AVCaptureAudioDataOutputSampleBufferDele
         //randomize width & height
         /// Creates the Bubble object
         let bubble = UIView(frame: CGRect(origin: CGPointZero, size: CGSize(width: bubbleSize, height: bubbleSize)))
-//        
-//        let bubblecolor1 = UIColor.purpleColor().CGColor
-//        
-//        let bubblecolor2 = UIColor.blueColor().CGColor
-//        
-//        let colorArray = [bubblecolor1, bubblecolor2]
-        
-//        func randomizedColors()  {
-//        
-//             arc4random_uniform(colorArray)
-//
-//          return
-//    }
-        
-        // colors[arc4random_uniform(colorArray.count)].CGColor
+
         
         //creates color array to chose from
         let colors = [UIColor.blueColor(), UIColor.cyanColor(), UIColor.purpleColor()]
